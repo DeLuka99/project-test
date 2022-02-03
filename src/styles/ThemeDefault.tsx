@@ -14,7 +14,7 @@ interface Theme {
   };
 }
 
-const theme = {
+const theme: Theme = {
   colors: {
     dark: "#000",
     softDark: "#36313D",

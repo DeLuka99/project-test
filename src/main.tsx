@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import ThemeDefault from "./styles/ThemeDefault";
-import "./index.css";
+import "./styles/index.css";
 import App from "./App";
 
 ReactDOM.render(

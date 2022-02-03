@@ -1,31 +1,27 @@
 import { useState } from "react";
-
-import logo from "./assets/logo.svg";
-
 import styled from "styled-components";
-import "./App.css";
+import { Home } from "./pages/Home";
+import { Teste } from "./pages/Teste";
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Background className="App">
-      <header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-      </header>
-    </Background>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/test" element={<Teste />} />
+        </Routes>
+      </Router>
+      {/* <img src={logo} alt="logo D3" />
+      <button type="button" onClick={() => setCount(count + 1)}>
+        count is: {count}
+      </button> */}
+    </>
   );
 }
 
 export default App;
-
-const Background = styled.div(
-  ({ theme }) => `
-    background: ${theme.colors.dark};
-  `
-);
