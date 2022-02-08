@@ -1,29 +1,14 @@
 import { ThemeProvider } from "styled-components";
 
-interface Theme {
+const theme = {
   colors: {
-    white: string;
-    persianGreen: string;
-    softDark: string;
-    dark: string;
-  };
-  fontSizes: {
-    small: string;
-    medium: string;
-    large: string;
-  };
-}
-
-const theme: Theme = {
-  colors: {
-    dark: "#000",
+    dark: "#000000",
     softDark: "#36313D",
 
     white: "#FFFDF9",
 
     persianGreen: "#06B49A",
   },
-  // fonts: ["sans-serif", "Roboto"],
   fontSizes: {
     small: "1em",
     medium: "2em",
