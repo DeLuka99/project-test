@@ -4,12 +4,14 @@ import { Home } from "./pages/Home";
 import { Teste } from "./pages/Teste";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Header } from "./components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+      <Header />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
