@@ -1,18 +1,12 @@
-import { ThemeProvider } from "styled-components";
+import { DefaultTheme, ThemeProvider } from "styled-components";
 
-const theme = {
+const theme: DefaultTheme = {
   colors: {
-    dark: "#000000",
-    softDark: "#36313D",
+    primary: "#27AE60",
+    secondary: "#92E3A9",
 
+    dark: "#1D1D1D",
     white: "#FFFDF9",
-
-    persianGreen: "#06B49A",
-  },
-  fontSizes: {
-    small: "1em",
-    medium: "2em",
-    large: "3em",
   },
 };
 

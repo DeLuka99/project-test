@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export function Home() {
-  return <H1>TESTE</H1>;
+function Home() {
+  return <H1>HOME</H1>;
 }
 
+export default Home;
+
 const H1 = styled.h1`
-  color: ${({ theme }) => theme.colors.persianGreen};
+  color: ${({ theme }) => theme.colors.primary};
 `;

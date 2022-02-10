@@ -1,29 +1,30 @@
 import { useState } from "react";
-import styled from "styled-components";
-import { Home } from "./pages/Home";
-import { Teste } from "./pages/Teste";
+import styled, { css } from "styled-components";
+import Home from "./pages/Home";
+import ErrorPage from "./pages/ErrorPage";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Header } from "./components/Header";
+import Header from "./components/Header";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Main>
       <Header />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<Teste />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
-      {/* <img src={logo} alt="logo D3" />
-      <button type="button" onClick={() => setCount(count + 1)}>
-        count is: {count}
-      </button> */}
-    </>
+    </Main>
   );
 }
 
 export default App;
+
+const Main = styled.div(
+  ({ theme }) => css`
+    height: 100vh;
+    background: ${theme.colors.dark};
+  `
+);
